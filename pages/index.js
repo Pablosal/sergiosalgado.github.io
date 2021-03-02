@@ -32,7 +32,7 @@ export default function Home({ data }) {
 }
 
 export function getServerSideProps(ctx){
-  const res = await fetch("https://127.0.0.1:443/api/proyectos");
+  const res = await fetch("https://localhost:3000/api/proyectos");
   const data = await res.json();
   return {
     props: data
