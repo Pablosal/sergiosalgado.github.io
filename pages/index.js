@@ -31,12 +31,10 @@ export default function Home({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+Home.getInitialProps= async (ctx)=> {
   const res = await fetch("http://localhost:3000/api/proyectos");
   const data = await res.json();
   return {
-    props: {
-      data,
-    },
+    stars: data
   };
 }
