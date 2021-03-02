@@ -32,7 +32,7 @@ export default function Home({ stars }) {
 }
 
 Home.getInitialProps= async (ctx)=> {
-  const res = await fetch("https://sergiosalgado-github-io-fjs9g7em2-pablosal.vercel.app/api/proyectos");
+  const res = await fetch("https://127.0.0.1/api/proyectos");
   const data = await res.json();
   return {
     stars: data
