@@ -2,7 +2,39 @@ import Head from "next/head";
 import { useEffect } from "react";
 import ProjectDisplay from "../components/ProjectDisplay";
 import Sidebar from "../components/Sidebar";
-export default function Home({ data }) {
+export default function Home() {
+const data = [
+  {
+    id: 0,
+    titulo: "Obituario Virtual",
+    image: "/images/obituario.png",
+
+    descripcion:
+      "Creada con firebase y react utilizando un firestore como base de datos NoSQL,permitiendo filtrar los casos segun el dia de la semana. Con la capacidad de distintas rutas mediante react-router-dom",
+    link: "https://epic-pike-27cd37.netlify.app/",
+    descripcionTecnologias:
+      "Firebase Firestore, react-router-dom para la conexion entre paginas y Context API para la manipulacion del estado.",
+    tecnologias: [
+      "fab fa-react fa-3x text-blue-500",
+      "fab fa-js-square fa-3x text-yellow-500",
+    ],
+  },
+  {
+    id: 1,
+    titulo: "Aplicacion de Muestra de Proovedores de Frutos Secos ",
+    image: "/images/proov.png",
+    descripcionTecnologias:
+      "Firebase Auth, Firestore, Storage, Elementos integrados de NextJs como Router, Images y Link ",
+
+    descripcion:
+      "creada en Next JS usando la Context API, utilizando contenido estatico, y renderizado desde el servidor, con autenticación en Firebase, y CRUD con firestore. ",
+    link: "https://proovedores-next.vercel.app/",
+    tecnologias: [
+      "fab fa-react fa-3x text-blue-500",
+      "fab fa-js-square fa-3x text-yellow-500",
+    ],
+  },
+];
 
   return (
     <div>
@@ -31,10 +63,4 @@ export default function Home({ data }) {
   );
 }
 
-export async function getServerSideProps(ctx){
-  const res = await fetch("https://localhost:3000/api/proyectos");
-  const data = await res.json();
-  return {
-    props: data
-  };
-}
+
