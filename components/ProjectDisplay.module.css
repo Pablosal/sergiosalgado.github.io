@@ -1,0 +1,39 @@
+.overlayContainer {
+  display: flex;
+  background-color: cadetblue;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+.buttonLink {
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid red;
+  background-color: transparent;
+  cursor: pointer;
+  width: 155px;
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: white;
+}
+.buttonLink:hover {
+  background-color: red;
+  color: white;
+}
+
+.flexPlaces {
+  display: flex;
+  flex-direction: column;
+}
+
+.centerTitle {
+  text-align: center;
+}
+.centerButton {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
