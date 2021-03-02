@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 import ProjectDisplay from "../components/ProjectDisplay";
 import Sidebar from "../components/Sidebar";
-export default function Home({ data }) {
+export default function Home({ stars }) {
 
   return (
     <div>
@@ -21,7 +21,7 @@ export default function Home({ data }) {
         <div className="md:col-start-2 md:col-end-6  col-start-1 col-end-6">
           <h2 className=" bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-center font-semibold text-3xl full text-white p-4 uppercase">Proyectos</h2>
           <div className="flex flex-col align-center justify-center ">
-            {data.map((dato) => (
+            {stars.map((dato) => (
               <ProjectDisplay key={dato.id} projecto={dato}></ProjectDisplay>
             ))}
           </div>
@@ -32,7 +32,7 @@ export default function Home({ data }) {
 }
 
 Home.getInitialProps= async (ctx)=> {
-  const res = await fetch("https://sergiosalgado-github-io-9md341f54-pablosal.vercel.app/api/proyectos");
+  const res = await fetch("https://sergiosalgado-github-io-fjs9g7em2-pablosal.vercel.app/api/proyectos");
   const data = await res.json();
   return {
     stars: data
