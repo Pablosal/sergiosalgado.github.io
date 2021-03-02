@@ -31,7 +31,7 @@ export default function Home({ data }) {
   );
 }
 
-exprot function getServerSideProps(ctx){
+export function getServerSideProps(ctx){
   const res = await fetch("https://127.0.0.1:443/api/proyectos");
   const data = await res.json();
   return {
