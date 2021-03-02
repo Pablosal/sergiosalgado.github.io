@@ -32,7 +32,7 @@ export default function Home({ data }) {
 }
 
 Home.getInitialProps= async (ctx)=> {
-  const res = await fetch("http://localhost:3000/api/proyectos");
+  const res = await fetch("127.0.0.1:3000/api/proyectos");
   const data = await res.json();
   return {
     stars: data
