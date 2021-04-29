@@ -13,7 +13,7 @@ const ProjectDisplay = ({ projecto, key }) => {
               layout="intrinsic"
               src={projecto.image}
               alt={projecto.titulo}
-              loading="lazy"
+       
             />
           ) : null}
         </div>
