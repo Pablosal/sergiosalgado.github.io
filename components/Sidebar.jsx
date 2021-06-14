@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import styles from "./Sidebar.module.css";
+
 const Sidebar = () => {
   return (
     <nav className="md:h-full md:w-72 w-full md:col-span-2 h-36 p-2 border-gray-400 border-r-2 bg-blue-650 shadow-sm  fixed left-0 top-0 z-50 flex md:flex-col justify-evenly md:justify-center items-center mb-11">
@@ -27,10 +26,17 @@ const Sidebar = () => {
           </h3>
           <ul className="flex justify-center items-center">
             <li className="mx-4">
-              <i className="fab fa-linkedin-in fa-3x cursor-pointer  text-blue-800 hover:text-blue-300"></i>
+              <a
+                href="https://www.linkedin.com/in/sergio-pablo-salgado/"
+                target="_blank"
+              >
+                <i className="fab fa-linkedin-in fa-3x cursor-pointer  text-blue-800 hover:text-blue-300"></i>
+              </a>
             </li>
             <li className="mx-4">
-              <i className="fab fa-github-alt fa-3x cursor-pointer hover:text-gray-700  text-black"></i>
+              <a href="https://github.com/Pablosal" target="_blank">
+                <i className="fab fa-github-alt fa-3x cursor-pointer hover:text-gray-700  text-black"></i>
+              </a>
             </li>
           </ul>
         </div>

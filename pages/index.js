@@ -29,7 +29,7 @@ export default function Home() {
       width: 340,
       descripcion:
         "Creada en React JS, utilizando styled components para manejar lo responsive, con un acercamiento mobile first y context API para manejar funciones",
-      link: "https://proovedores-next.vercel.app/",
+      link: "https://keen-borg-aa53cd.netlify.app/",
       tecnologias: [
         "fab fa-react fa-3x text-blue-500",
         "fab fa-js-square fa-3x text-yellow-500",

@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
-import styles from "./ProjectDisplay.module.css";
+import React from "react";
 import Image from "next/image";
-const ProjectDisplay = ({ projecto, key }) => {
+const ProjectDisplay = ({ projecto }) => {
   return (
     <div className="rounded-lgh-full shadow-sm mt-3  justify-self-center my-5">
       <div className="flex justify-center items-center md:items-start md:flex-row flex-col">
-        <div>
+        <div className="mr-8">
           {projecto.image ? (
             <Image
               width={projecto.width}
@@ -13,7 +12,6 @@ const ProjectDisplay = ({ projecto, key }) => {
               layout="intrinsic"
               src={projecto.image}
               alt={projecto.titulo}
-       
             />
           ) : null}
         </div>
@@ -35,7 +33,7 @@ const ProjectDisplay = ({ projecto, key }) => {
           </div>
           <div className="flex justify-center space-x-4 my-5 align-center w-full ">
             {projecto.tecnologias.map((t) => (
-              <i className={t}></i>
+              <i className={t} key={t}></i>
             ))}
           </div>
           <div className="flex justify-center">
